@@ -22,7 +22,7 @@
         /* Hero Section */
         .hero { height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('https://images.unsplash.com/photo-1516589174184-c685265162fb?auto=format&fit=crop&q=80&w=2000'); background-size: cover; padding: 0 20px; }
         .hero h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: var(--teal); margin-bottom: 10px; }
-        .hero p { font-size: 1.2rem; max-width: 600px; margin-bottom: 30px; }
+        .hero p { font-size: 1.2rem; max-width: 800px; margin-bottom: 30px; line-height: 1.6; }
         
         /* Buttons */
         .btn { background: var(--gold); color: white; padding: 15px 35px; border: none; border-radius: 50px; font-weight: 600; cursor: pointer; text-decoration: none; transition: 0.3s; box-shadow: 0 4px 15px rgba(212, 163, 115, 0.3); }
@@ -39,7 +39,7 @@
 
         /* Modal Interactivity */
         #modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 2000; justify-content: center; align-items: center; }
-        .modal-content { background: white; padding: 40px; border-radius: 15px; width: 90%; max-width: 400px; text-align: center; }
+        .modal-content { background: white; padding: 40px; border-radius: 15px; width: 90%; max-width: 400px; text-align: center; color: var(--text); }
     </style>
 </head>
 <body>
@@ -51,7 +51,11 @@
 
 <section class="hero">
     <h1>Bridging Hearts & Minds</h1>
-    <p>Empowering you to build stronger connections, healthier marriages, and a happier home.</p>
+    <p>
+        Sambandh Setu is your dedicated bridge to deeper connections. We provide expert Relationship and Parenting coaching to help you navigate conflict, strengthen bonds, and build a harmonious home for a lifetime. 
+        <br><br>
+        <strong>Our mission is to empower parents with conscious strategies to raise resilient, happy children while fostering a marriage built on mutual respect and lasting intimacy.</strong>
+    </p>
     <a href="javascript:void(0)" onclick="openModal()" class="btn">Start Your Journey</a>
 </section>
 
@@ -62,24 +66,24 @@
     </div>
     <div class="card">
         <h3>Parenting Guidance</h3>
-        <p>Conscious strategies to raise resilient, happy children with confidence.</p>
+        <p>Conscious strategies to handle modern parenting challenges and nurture your child's growth.</p>
     </div>
     <div class="card">
         <h3>Family Conflict Resolution</h3>
-        <p>Navigate complex family dynamics and build a bridge toward lasting peace.</p>
+        <p>Navigate complex family dynamics and build a bridge toward lasting peace and understanding.</p>
     </div>
 </section>
 
 <footer>
-    <p>&copy; 2026 Sambandh Setu | Designed for Rajveer</p>
-    <p>Relationship & Parenting Coach</p>
+    <p>&copy; 2026 Sambandh Setu | Relationship & Parenting Coach</p>
+    <p>Designed for Rajveer</p>
 </footer>
 
 <div id="modal">
     <div class="modal-content">
         <h2 style="color: var(--teal)">Let's Connect</h2>
         <p>Ready to build your bridge? Message me on WhatsApp!</p>
-        <a href="https://wa.me/YOUR_PHONE_NUMBER" class="btn">Chat on WhatsApp</a>
+        <a href="https://wa.me/91XXXXXXXXXX" class="btn">Chat on WhatsApp</a>
         <br><br>
         <button onclick="closeModal()" style="border: none; background: none; color: #999; cursor: pointer;">Close</button>
     </div>
