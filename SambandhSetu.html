@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sambandh Setu | Relationship & Parent Coach</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --teal: #1a5e63;
+            --gold: #d4a373;
+            --cream: #fdfaf5;
+            --text: #333;
+        }
+        * { box-sizing: border-box; scroll-behavior: smooth; }
+        body { font-family: 'Poppins', sans-serif; margin: 0; background-color: var(--cream); color: var(--text); }
+        
+        /* Navigation */
+        nav { background: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--teal); font-weight: bold; }
+        
+        /* Hero Section */
+        .hero { height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('https://images.unsplash.com/photo-1516589174184-c685265162fb?auto=format&fit=crop&q=80&w=2000'); background-size: cover; padding: 0 20px; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: var(--teal); margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; max-width: 600px; margin-bottom: 30px; }
+        
+        /* Buttons */
+        .btn { background: var(--gold); color: white; padding: 15px 35px; border: none; border-radius: 50px; font-weight: 600; cursor: pointer; text-decoration: none; transition: 0.3s; box-shadow: 0 4px 15px rgba(212, 163, 115, 0.3); }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(212, 163, 115, 0.4); background: #c29262; }
+
+        /* Interactive Cards */
+        .services { padding: 80px 10%; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .card { background: white; padding: 40px; border-radius: 20px; text-align: center; transition: 0.4s; border: 1px solid #eee; }
+        .card:hover { transform: scale(1.05); border-color: var(--gold); }
+        .card h3 { color: var(--teal); font-family: 'Playfair Display', serif; }
+
+        /* Footer */
+        footer { background: var(--teal); color: white; text-align: center; padding: 40px; margin-top: 50px; }
+
+        /* Modal Interactivity */
+        #modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 2000; justify-content: center; align-items: center; }
+        .modal-content { background: white; padding: 40px; border-radius: 15px; width: 90%; max-width: 400px; text-align: center; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">Sambandh Setu</div>
+    <a href="javascript:void(0)" onclick="openModal()" class="btn" style="padding: 10px 20px; font-size: 0.9rem;">Get in Touch</a>
+</nav>
+
+<section class="hero">
+    <h1>Bridging Hearts & Minds</h1>
+    <p>Empowering you to build stronger connections, healthier marriages, and a happier home.</p>
+    <a href="javascript:void(0)" onclick="openModal()" class="btn">Start Your Journey</a>
+</section>
+
+<section class="services">
+    <div class="card">
+        <h3>Relationship Coaching</h3>
+        <p>Expert tools to mend communication and rediscover intimacy in your partnership.</p>
+    </div>
+    <div class="card">
+        <h3>Parenting Guidance</h3>
+        <p>Conscious strategies to raise resilient, happy children with confidence.</p>
+    </div>
+    <div class="card">
+        <h3>Family Conflict Resolution</h3>
+        <p>Navigate complex family dynamics and build a bridge toward lasting peace.</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Sambandh Setu | Designed for Rajveer</p>
+    <p>Relationship & Parenting Coach</p>
+</footer>
+
+<div id="modal">
+    <div class="modal-content">
+        <h2 style="color: var(--teal)">Let's Connect</h2>
+        <p>Ready to build your bridge? Message me on WhatsApp!</p>
+        <a href="https://wa.me/YOUR_PHONE_NUMBER" class="btn">Chat on WhatsApp</a>
+        <br><br>
+        <button onclick="closeModal()" style="border: none; background: none; color: #999; cursor: pointer;">Close</button>
+    </div>
+</div>
+
+<script>
+    function openModal() { document.getElementById('modal').style.display = 'flex'; }
+    function closeModal() { document.getElementById('modal').style.display = 'none'; }
+    window.onclick = function(event) { if (event.target == document.getElementById('modal')) closeModal(); }
+</script>
+
+</body>
+</html>
