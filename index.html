@@ -6,125 +6,145 @@
     <title>Sambandh Setu</title>
     <style>
         :root {
-            --primary-teal: #1a4d4d; /* Matching the dark teal in your image */
-            --accent-tan: #d2a679;  /* Matching your button color */
-            --text-dark: #333333;
+            --brand-teal: #1a4d4d;
+            --brand-tan: #d2a679;
+            --bg-cream: #fffcf7;
         }
 
         body {
-            font-family: 'Georgia', serif; /* Using a serif font like your screenshot */
+            font-family: 'Times New Roman', Times, serif;
             margin: 0;
             padding: 0;
-            line-height: 1.4;
-            color: var(--text-dark);
-            background-color: #ffffff;
+            background-color: var(--bg-cream);
+            color: #333;
         }
 
-        /* Header Layout */
+        /* Header matching the image */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 20px;
-            border-left: 5px solid var(--accent-tan);
-            margin: 10px;
+            padding: 20px;
+            background: white;
+            border-bottom: 1px solid #eee;
         }
 
-        .logo {
-            color: var(--primary-teal);
+        .logo-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .tan-bar {
+            width: 4px;
+            height: 45px;
+            background-color: var(--brand-tan);
+        }
+
+        .logo-name {
+            color: var(--brand-teal);
             font-size: 24px;
             font-weight: bold;
             line-height: 1.1;
         }
 
-        .cta-button {
-            background-color: var(--accent-tan);
+        .get-touch-btn {
+            background-color: var(--brand-tan);
             color: white;
             padding: 10px 20px;
             border-radius: 50px;
             text-decoration: none;
             font-size: 14px;
+            font-family: sans-serif;
             text-align: center;
         }
 
-        /* Hero Section - FIX FOR CUT OFF TEXT */
-        .hero {
-            padding: 40px 20px;
+        /* Hero Text - Fixed Visibility */
+        .hero-section {
+            background: white;
+            margin: 15px;
+            padding: 40px 10px;
+            border-radius: 15px;
             text-align: center;
         }
 
-        .hero h1 {
-            color: var(--primary-teal);
-            font-size: clamp(2rem, 8vw, 3.5rem); /* Dynamically scales text to fit screen */
+        .hero-section h1 {
+            color: var(--brand-teal);
+            /* This ensures the text stays visible on small screens */
+            font-size: 10vw; 
+            max-font-size: 48px;
             margin: 0;
-            word-wrap: break-word;
             line-height: 1.2;
         }
 
-        /* Content Section */
-        .content {
-            padding: 20px;
-            font-family: sans-serif; /* Cleaner for body text */
-            color: #555;
-            font-size: 16px;
+        /* Main Content */
+        .card {
+            background: white;
+            margin: 15px;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
         }
 
-        .contact-info {
-            margin-top: 20px;
-            padding: 15px;
-            background: #fdf6ed;
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        .phone-link {
-            display: block;
+        .card h2 {
+            color: var(--brand-teal);
             font-size: 20px;
-            color: var(--primary-teal);
-            font-weight: bold;
-            margin-top: 10px;
-            text-decoration: none;
+            text-align: center;
+            margin-bottom: 15px;
         }
 
-        /* Mobile specific adjustments */
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 32px; /* Fixed size for small phones */
-            }
-            .content {
-                font-size: 15px;
-            }
+        .card p {
+            font-family: sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* THE WHATSAPP BUTTON */
+        .whatsapp-link {
+            display: block;
+            background-color: var(--brand-teal);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin: 20px 15px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            font-family: sans-serif;
+            transition: transform 0.2s;
+        }
+
+        .whatsapp-link:active {
+            transform: scale(0.95);
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">Sambandh<br>Setu</div>
-        <a href="tel:+917795157257" class="cta-button">Get in<br>Touch</a>
+        <div class="logo-group">
+            <div class="tan-bar"></div>
+            <div class="logo-name">Sambandh<br>Setu</div>
+        </div>
+        <a href="https://wa.me/917795157257" class="get-touch-btn">Get in<br>Touch</a>
     </header>
 
-    <section class="hero">
+    <div class="hero-section">
         <h1>Bridging<br>Hearts &<br>Minds</h1>
-    </section>
-
-    <div class="content">
-        <p>
-            <strong>Sambandh Setu</strong> is your dedicated bridge to deeper connections. 
-            We provide expert Relationship and Parenting coaching to help you navigate 
-            conflict, strengthen bonds, and build a harmonious home for a lifetime.
-        </p>
-        
-        <p>
-            Our mission is to empower parents with conscious strategies to raise resilient, 
-            happy children while fostering a marriage built on mutual respect.
-        </p>
-
-        <div class="contact-info">
-            <strong>Contact Rajveer:</strong>
-            <a href="tel:+917795157257" class="phone-link">+91 7795157257</a>
-        </div>
     </div>
+
+    <div class="card">
+        <h2>Parenting Guidance</h2>
+        <p>
+            Sambandh Setu is your dedicated bridge to deeper connections. We provide expert Relationship and Parenting coaching to help you navigate conflict, strengthen bonds, and build a harmonious home for a lifetime.
+        </p>
+    </div>
+
+    <a href="https://wa.me/917795157257?text=Hi!%20I%20would%20like%20to%20start%20my%20journey%20with%20Sambandh%20Setu." class="whatsapp-link">
+        Start Your Journey
+    </a>
 
 </body>
 </html>
