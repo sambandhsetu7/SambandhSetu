@@ -3,79 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sambandh Setu | Relationship & Parent Coach</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Sambandh Setu</title>
     <style>
-        :root { --teal: #1a5e63; --gold: #d4a373; --cream: #fdfaf5; --text: #333; }
-        * { box-sizing: border-box; scroll-behavior: smooth; }
-        body { font-family: 'Poppins', sans-serif; margin: 0; background-color: var(--cream); color: var(--text); line-height: 1.6; }
-        nav { background: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-        .logo-text { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--teal); font-weight: bold; border-left: 4px solid var(--gold); padding-left: 15px; }
-        .hero { height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('https://images.unsplash.com/photo-1516589174184-c685265162fb?auto=format&fit=crop&q=80&w=2000'); background-size: cover; padding: 0 20px; }
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: var(--teal); margin-bottom: 10px; }
-        .hero p { font-size: 1.1rem; max-width: 800px; margin-bottom: 30px; }
-        .btn { background: var(--gold); color: white; padding: 15px 35px; border: none; border-radius: 50px; font-weight: 600; cursor: pointer; text-decoration: none; transition: 0.3s; box-shadow: 0 4px 15px rgba(212, 163, 115, 0.3); display: inline-block; }
-        .btn:hover { transform: translateY(-3px); background: #c29262; }
-        .services { padding: 60px 10%; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-        .card { background: white; padding: 40px; border-radius: 20px; text-align: center; border: 1px solid #eee; }
-        .card h3 { color: var(--teal); font-family: 'Playfair Display', serif; margin-top: 0; }
-        footer { background: var(--teal); color: white; text-align: center; padding: 40px; }
-        #modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 2000; justify-content: center; align-items: center; }
-        .modal-content { background: white; padding: 40px; border-radius: 15px; width: 90%; max-width: 400px; text-align: center; color: var(--text); }
+        :root {
+            --primary-teal: #1a4d4d; /* Matching the dark teal in your image */
+            --accent-tan: #d2a679;  /* Matching your button color */
+            --text-dark: #333333;
+        }
+
+        body {
+            font-family: 'Georgia', serif; /* Using a serif font like your screenshot */
+            margin: 0;
+            padding: 0;
+            line-height: 1.4;
+            color: var(--text-dark);
+            background-color: #ffffff;
+        }
+
+        /* Header Layout */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            border-left: 5px solid var(--accent-tan);
+            margin: 10px;
+        }
+
+        .logo {
+            color: var(--primary-teal);
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 1.1;
+        }
+
+        .cta-button {
+            background-color: var(--accent-tan);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        /* Hero Section - FIX FOR CUT OFF TEXT */
+        .hero {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            color: var(--primary-teal);
+            font-size: clamp(2rem, 8vw, 3.5rem); /* Dynamically scales text to fit screen */
+            margin: 0;
+            word-wrap: break-word;
+            line-height: 1.2;
+        }
+
+        /* Content Section */
+        .content {
+            padding: 20px;
+            font-family: sans-serif; /* Cleaner for body text */
+            color: #555;
+            font-size: 16px;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            padding: 15px;
+            background: #fdf6ed;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .phone-link {
+            display: block;
+            font-size: 20px;
+            color: var(--primary-teal);
+            font-weight: bold;
+            margin-top: 10px;
+            text-decoration: none;
+        }
+
+        /* Mobile specific adjustments */
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 32px; /* Fixed size for small phones */
+            }
+            .content {
+                font-size: 15px;
+            }
+        }
     </style>
 </head>
 <body>
 
-<nav>
-    <div class="logo-text">Sambandh Setu</div>
-    <a href="javascript:void(0)" onclick="openModal()" class="btn" style="padding: 10px 20px; font-size: 0.9rem;">Get in Touch</a>
-</nav>
+    <header>
+        <div class="logo">Sambandh<br>Setu</div>
+        <a href="tel:+917795157257" class="cta-button">Get in<br>Touch</a>
+    </header>
 
-<section class="hero">
-    <h1>Bridging Hearts & Minds</h1>
-    <p>
-        Sambandh Setu is your dedicated bridge to deeper connections. We provide expert Relationship and Parenting coaching to help you navigate conflict, strengthen bonds, and build a harmonious home for a lifetime. 
-        <br><br>
-        <strong>Our mission is to empower parents with conscious strategies to raise resilient, happy children while fostering a marriage built on mutual respect and lasting intimacy.</strong>
-    </p>
-    <a href="javascript:void(0)" onclick="openModal()" class="btn">Start Your Journey</a>
-</section>
+    <section class="hero">
+        <h1>Bridging<br>Hearts &<br>Minds</h1>
+    </section>
 
-<section class="services">
-    <div class="card">
-        <h3>Relationship Coaching</h3>
-        <p>Expert tools to mend communication and rediscover intimacy in your partnership.</p>
+    <div class="content">
+        <p>
+            <strong>Sambandh Setu</strong> is your dedicated bridge to deeper connections. 
+            We provide expert Relationship and Parenting coaching to help you navigate 
+            conflict, strengthen bonds, and build a harmonious home for a lifetime.
+        </p>
+        
+        <p>
+            Our mission is to empower parents with conscious strategies to raise resilient, 
+            happy children while fostering a marriage built on mutual respect.
+        </p>
+
+        <div class="contact-info">
+            <strong>Contact Rajveer:</strong>
+            <a href="tel:+917795157257" class="phone-link">+91 7795157257</a>
+        </div>
     </div>
-    <div class="card">
-        <h3>Parenting Guidance</h3>
-        <p>Conscious strategies to handle modern parenting challenges and nurture your child's growth.</p>
-    </div>
-    <div class="card">
-        <h3>Conflict Resolution</h3>
-        <p>Navigate complex family dynamics and build a bridge toward lasting peace.</p>
-    </div>
-</section>
-
-<footer>
-    <p>&copy; 2026 Sambandh Setu | Relationship & Parenting Coach</p>
-</footer>
-
-<div id="modal">
-    <div class="modal-content">
-        <h2 style="color: var(--teal)">Let's Connect</h2>
-        <p>Ready to build your bridge? Message me on WhatsApp!</p>
-        <a href="https://wa.me/918867027378" class="btn">Chat on WhatsApp</a>
-        <br><br>
-        <button onclick="closeModal()" style="border: none; background: none; color: #999; cursor: pointer;">Close</button>
-    </div>
-</div>
-
-<script>
-    function openModal() { document.getElementById('modal').style.display = 'flex'; }
-    function closeModal() { document.getElementById('modal').style.display = 'none'; }
-    window.onclick = function(event) { if (event.target == document.getElementById('modal')) closeModal(); }
-</script>
 
 </body>
 </html>
-
