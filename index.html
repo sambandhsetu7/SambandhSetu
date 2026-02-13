@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sambandh Setu</title>
+    <title>Sambandh Setu | Coaching</title>
     <style>
         :root {
             --brand-teal: #1a4d4d;
@@ -17,16 +17,20 @@
             padding: 0;
             background-color: var(--bg-cream);
             color: #333;
+            line-height: 1.6;
         }
 
-        /* Header matching the image */
+        /* Header */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px;
+            padding: 15px 20px;
             background: white;
-            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
         .logo-group {
@@ -37,88 +41,99 @@
 
         .tan-bar {
             width: 4px;
-            height: 45px;
+            height: 40px;
             background-color: var(--brand-tan);
         }
 
         .logo-name {
             color: var(--brand-teal);
-            font-size: 24px;
+            font-size: 22px;
             font-weight: bold;
             line-height: 1.1;
         }
 
-        .get-touch-btn {
-            background-color: var(--brand-tan);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 14px;
-            font-family: sans-serif;
-            text-align: center;
-        }
-
-        /* Hero Text - Fixed Visibility */
-        .hero-section {
+        /* Hero Section */
+        .hero {
             background: white;
             margin: 15px;
-            padding: 40px 10px;
-            border-radius: 15px;
+            padding: 40px 15px;
+            border-radius: 20px;
             text-align: center;
         }
 
-        .hero-section h1 {
+        .hero h1 {
             color: var(--brand-teal);
-            /* This ensures the text stays visible on small screens */
-            font-size: 10vw; 
-            max-font-size: 48px;
-            margin: 0;
+            font-size: clamp(32px, 10vw, 50px);
+            margin: 0 0 15px 0;
             line-height: 1.2;
         }
 
-        /* Main Content */
-        .card {
+        .hero-desc {
+            font-family: sans-serif;
+            font-size: 18px;
+            color: #555;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Scrolling Content Sections */
+        .section-card {
             background: white;
-            margin: 15px;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            margin: 20px 15px;
+            padding: 30px 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
         }
 
-        .card h2 {
+        h2 {
             color: var(--brand-teal);
-            font-size: 20px;
-            text-align: center;
-            margin-bottom: 15px;
+            font-size: 24px;
+            border-bottom: 2px solid var(--brand-tan);
+            display: inline-block;
+            margin-bottom: 20px;
         }
 
-        .card p {
+        .content-text {
             font-family: sans-serif;
             font-size: 16px;
-            line-height: 1.6;
-            color: #555;
+            color: #444;
         }
 
-        /* THE WHATSAPP BUTTON */
-        .whatsapp-link {
-            display: block;
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        /* Fixed WhatsApp Button */
+        .footer-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 15px;
+            background: linear-gradient(transparent, var(--bg-cream) 20%);
+            text-align: center;
+        }
+
+        .whatsapp-btn {
+            display: inline-block;
             background-color: var(--brand-teal);
             color: white;
-            text-align: center;
-            padding: 20px;
-            margin: 20px 15px;
-            border-radius: 10px;
+            width: 90%;
+            max-width: 400px;
+            padding: 18px;
+            border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
             font-size: 18px;
             font-family: sans-serif;
-            transition: transform 0.2s;
+            box-shadow: 0 10px 20px rgba(26, 77, 77, 0.3);
         }
 
-        .whatsapp-link:active {
-            transform: scale(0.95);
-        }
+        .spacer { height: 100px; } /* Space for fixed button */
     </style>
 </head>
 <body>
@@ -128,23 +143,48 @@
             <div class="tan-bar"></div>
             <div class="logo-name">Sambandh<br>Setu</div>
         </div>
-        <a href="https://wa.me/917795157257" class="get-touch-btn">Get in<br>Touch</a>
     </header>
 
-    <div class="hero-section">
+    <section class="hero">
         <h1>Bridging<br>Hearts &<br>Minds</h1>
-    </div>
-
-    <div class="card">
-        <h2>Parenting Guidance</h2>
-        <p>
-            Sambandh Setu is your dedicated bridge to deeper connections. We provide expert Relationship and Parenting coaching to help you navigate conflict, strengthen bonds, and build a harmonious home for a lifetime.
+        <p class="hero-desc">
+            Your dedicated platform for <strong>Relationship and Parenting Coaching</strong>. 
+            We help you navigate the journey of connection, from fostering deep bonds with your partner 
+            to raising resilient, happy children.
         </p>
+    </section>
+
+    <div class="section-card">
+        <h2>Parenting Guidance</h2>
+        <div class="content-text">
+            <p>Raising children in the modern world comes with unique challenges. Our coaching provides:</p>
+            <ul>
+                <li>Conscious parenting strategies to handle daily conflicts.</li>
+                <li>Tools to nurture your child's emotional and mental growth.</li>
+                <li>Techniques to build a resilient and happy family environment.</li>
+            </ul>
+        </div>
     </div>
 
-    <a href="https://wa.me/917795157257?text=Hi!%20I%20would%20like%20to%20start%20my%20journey%20with%20Sambandh%20Setu." class="whatsapp-link">
-        Start Your Journey
-    </a>
+    <div class="section-card">
+        <h2>Relationship Coaching</h2>
+        <div class="content-text">
+            <p>A strong partnership is the foundation of a happy home. We help couples:</p>
+            <ul>
+                <li>Improve communication and resolve deep-seated conflicts.</li>
+                <li>Rebuild trust and emotional intimacy.</li>
+                <li>Foster a marriage built on mutual respect and shared goals.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="footer-cta">
+        <a href="https://wa.me/917795157257?text=Hi%20Rajveer,%20I'd%20like%20to%20start%20my%20journey%20with%20Sambandh%20Setu." class="whatsapp-btn">
+            Start Your Journey
+        </a>
+    </div>
 
 </body>
 </html>
